@@ -1,0 +1,9 @@
+Karakter baseret kamp med brug af kort.
+
+I denne opgave vil jeg lave en spil hvor to karakter kæmper mod hinanden med brug af kort.
+Kortene viser forskellige angreb har forskellige værdier der bruges til at angribe den anden spiller.
+De forskellige karakter har også forskellige værdier der enten modstår eller hjælper angreb.
+Spillerne kan spille forskellige steder, de forskellige steder påvirker hvor effektive de angrebene er.
+Karaktererne og stederne har forskellige designs der gør det lettere for spillerne at fordybe sig i spillet.
+Spillet er lavet i processing hvor der lokalt skal være mulighed for to spillere.
+Teknisk set er der forskellige scener bl.a. til valg af spiller, valg af sted, valg af kort og kampen selv.
