@@ -7,3 +7,10 @@ Spillerne kan spille forskellige steder, de forskellige steder påvirker hvor ef
 Karaktererne og stederne har forskellige designs der gør det lettere for spillerne at fordybe sig i spillet.
 Spillet er lavet i processing hvor der lokalt skal være mulighed for to spillere.
 Teknisk set er der forskellige scener bl.a. til valg af spiller, valg af sted, valg af kort og kampen selv.
+
+
+Hvordan kan jeg vha. de metoder jeg har lært i programmering skabe et kampspil der bruger kort?
+
+Hvilke dele skal spillet indeholde for at være funktionelt?
+Hvordan hjælper kortene på at lave et godt spil?
+Hvor mange karakter skal der være?
