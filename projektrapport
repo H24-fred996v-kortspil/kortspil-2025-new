@@ -14,3 +14,19 @@ Hvordan kan jeg vha. de metoder jeg har lært i programmering skabe et kampspil 
 Hvilke dele skal spillet indeholde for at være funktionelt?
 Hvordan hjælper kortene på at lave et godt spil?
 Hvor mange karakter skal der være?
+
+
+Krav:
+Man skal kunne vælge forskellige steder
+Man skal kunne vælge forskellige karakter
+Man skal kunne vælge kort
+Man skal kunne se begge spillernes liv
+Man skal kunne kunne bruge kortene til at angribe den anden spiller på tur mellem spillerne
+Angrebet skal korrect skaleres udfra påvirkningen af stedet, karakteren og kortet
+Angrebet skal påvirken den anden spillers liv
+Det skal tjekkes for liv og erklares en vinder når den en spillers liv rammer nul
+
+
+
+Litteratur liste:
+https://sohtx.systime.dk/?id=224#c802
