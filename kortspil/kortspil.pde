@@ -7,6 +7,8 @@ int hlt1=100;
 int hlt2=100;
 boolean firstPicked = false;
 boolean isItPlayerOneTurn = true;
+int dmg;
+int sacrifice;
 
 
 void setup() {
@@ -87,6 +89,13 @@ void draw() {
       dmg2=300;
       hlt2=20;
       scene="angrib";
+      dmg=int(random(1, 10));
+      if (sted=="Ørken") {
+        dmg=ceil(dmg*1.2*0.8);
+      } else {
+        dmg=ceil(dmg*0.9*1.4);
+      }
+      sacrifice=int(random(1, 4));
       actionPerformedOnClick = true;
     }
     if (mousePressed==true&&mouseX>500&&mouseX<700&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false&&firstPicked==false) {
@@ -99,6 +108,13 @@ void draw() {
       dmg2=200;
       hlt2=50;
       scene="angrib";
+      dmg=int(random(1, 10));
+      if (sted=="Ørken") {
+        dmg=ceil(dmg*1.2*0.8);
+      } else {
+        dmg=ceil(dmg*0.9*1.4);
+      }
+      sacrifice=int(random(1, 4));
       actionPerformedOnClick = true;
     }
     if (mousePressed==true&&mouseX>900&&mouseX<1100&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false&&firstPicked==false) {
@@ -111,10 +127,17 @@ void draw() {
       dmg2=50;
       hlt2=250;
       scene="angrib";
+      dmg=int(random(1, 10));
+      if (sted=="Ørken") {
+        dmg=ceil(dmg*1.2*0.8);
+      } else {
+        dmg=ceil(dmg*0.9*1.4);
+      }
+      sacrifice=int(random(1, 4));
       actionPerformedOnClick = true;
     }
   }
-/*
+
   if (scene=="angrib") {
     fill(255);
     textSize(40);
@@ -123,12 +146,54 @@ void draw() {
     } else {
       text("Second player", 600, 100);
     }
-    text("Player 1 health: "+hlt1,300,100);
-    text("Player 2 health: "+hlt2,900,100);
+    text("Player 1 health: "+hlt1, 300, 100);
+    text("Player 2 health: "+hlt2, 900, 100);
     rect(300, 450, 200, 300);
     rect(900, 450, 200, 300);
+    fill(0);
+    text("Angreb", 300, 375);
+    text(dmg+" dmg", 300, 525);
+    text("Angreb", 900, 337.5);
+    text(ceil(dmg*1.2)+" dmg", 900, 412.5);
+    text("Ofre", 900, 487.5);
+    text(sacrifice+" hlt", 900, 562.5);
+    if (mousePressed==true&&mouseX>200&&mouseX<400&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false) {
+      if (isItPlayerOneTurn==true) {
+        hlt2=hlt2-ceil(dmg);
+        isItPlayerOneTurn=false;
+      } else {
+        hlt1=hlt1-ceil(dmg);
+        isItPlayerOneTurn=true;
+      }
+      dmg=int(random(1, 10));
+      if (sted=="Ørken") {
+        dmg=ceil(dmg*1.2*0.8);
+      } else {
+        dmg=ceil(dmg*0.9*1.4);
+      }
+      sacrifice=int(random(1, 4));
+      actionPerformedOnClick = true;
+    }
+    if (mousePressed==true&&mouseX>800&&mouseX<1000&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false) {
+      if (isItPlayerOneTurn==true) {
+        hlt2=hlt2-ceil(dmg*1.2);
+        hlt1=hlt1-sacrifice;
+        isItPlayerOneTurn=false;
+      } else {
+        hlt1=hlt1-ceil(dmg*1.2);
+        hlt2=hlt2-sacrifice;
+        isItPlayerOneTurn=true;
+      }
+      dmg=int(random(1, 10));
+      if (sted=="Ørken") {
+        dmg=ceil(dmg*1.2*0.8);
+      } else {
+        dmg=ceil(dmg*0.9*1.4);
+      }
+      sacrifice=int(random(1, 4));
+      actionPerformedOnClick = true;
+    }
   }
-  */
 }
 
 void mouseReleased() {
