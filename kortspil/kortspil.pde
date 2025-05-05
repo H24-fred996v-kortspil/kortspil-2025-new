@@ -159,10 +159,10 @@ void draw() {
     text(sacrifice+" hlt", 900, 562.5);
     if (mousePressed==true&&mouseX>200&&mouseX<400&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false) {
       if (isItPlayerOneTurn==true) {
-        hlt2=hlt2-ceil(dmg);
+        hlt2=hlt2-ceil(dmg*dmg1/100);
         isItPlayerOneTurn=false;
       } else {
-        hlt1=hlt1-ceil(dmg);
+        hlt1=hlt1-ceil(dmg*dmg2/100);
         isItPlayerOneTurn=true;
       }
       dmg=int(random(1, 10));
@@ -176,11 +176,11 @@ void draw() {
     }
     if (mousePressed==true&&mouseX>800&&mouseX<1000&&mouseY>300&&mouseY<600&&actionPerformedOnClick==false) {
       if (isItPlayerOneTurn==true) {
-        hlt2=hlt2-ceil(dmg*1.2);
+        hlt2=hlt2-ceil(dmg*1.2*dmg1/100);
         hlt1=hlt1-sacrifice;
         isItPlayerOneTurn=false;
       } else {
-        hlt1=hlt1-ceil(dmg*1.2);
+        hlt1=hlt1-ceil(dmg*1.2*dmg2/100);
         hlt2=hlt2-sacrifice;
         isItPlayerOneTurn=true;
       }
@@ -193,6 +193,23 @@ void draw() {
       sacrifice=int(random(1, 4));
       actionPerformedOnClick = true;
     }
+    if (hlt1<1) {
+      scene="win2";
+    }
+    if (hlt2<1) {
+      scene="win1";
+    }
+  }
+
+  if (scene=="win1") {
+    fill(255);
+    textSize(160);
+    text("Player 1 Wins",600,450);
+  }
+  if (scene=="win2") {
+    fill(255);
+    textSize(160);
+    text("Player 2 Wins",600,450);
   }
 }
 
